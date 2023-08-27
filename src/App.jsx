@@ -32,7 +32,27 @@ import Name from './Name'
 const App=()=>{
     return (
         <>
-        <Name />
+        <h1 className='Heading'>📺 Welcome to <span>Slot Machine Game</span></h1>
+        <div className='container'>
+        <div className='innerBox'>
+        <Name x='👍' 
+           y='👍'  z='👍' 
+        />
+        <Name
+            x='👍' 
+           y='👍'  z='🥉'
+        />
+        <Name
+            x='👍' 
+           y='👍'  z='🥉'
+        />
+        <Name
+            x='🥉' 
+           y='👍'  z='🥉'
+        />
+        </div>
+        </div>
+        
         </>
     )
 }

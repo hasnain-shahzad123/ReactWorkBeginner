@@ -9,27 +9,28 @@
 // export default Name;
 
 import React from "react";
-const Name=()=>{
-    return(
-    <>
-    <h1 className='Heading'>📺 Welcome to <span>Slot Machine Game</span></h1>
-    <div className='container'>
-            <div className='innerBox'>
-            <p>
-            😄 😄 😄<br />
-            This is matching</p>
-            <p>
-            👍 🥕 🛐<br />
-            This is not matching</p>
-            <p>
-            🙅‍♂️ 🧖‍♂️ 🧖<br />
-            This is not matching</p>
-            <p>
-            😧 😧 😧<br />
-            This is matching</p>             
-            </div>
-        </div>
-    </>
-    )
+const Name=(props)=>{
+    // let x=props.x;
+    // let y=props.y;
+    // let z=props.z;
+    let{x,y,z}=props //this is object destructuring 
+    console.log(props.x)
+        if(x==y && y==z){
+            return (
+                <>
+                <p>This is matcing 
+                <br/>
+                {props.x} {props.y} {props.z}</p>
+                </>
+            )
+        }
+        else{
+            return (
+                <>
+                <p>This is not matching<br/>
+                {props.x} {props.y} {props.z}</p>
+                </>
+            )
+        }
 }
 export default Name;
